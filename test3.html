@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury CV Template</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cv-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .left-section {
+            flex: 1;
+            background: #2f3640;
+            color: #f5f6fa;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .left-section img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid #f5f6fa;
+        }
+
+        .left-section h2 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .left-section p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .left-section ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .left-section ul li {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .left-section ul li strong {
+            display: block;
+            font-weight: 600;
+            color: #f5f6fa;
+        }
+
+        .right-section {
+            flex: 2;
+            padding: 40px;
+        }
+
+        .right-section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2f3640;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e1b12c;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #40739e;
+        }
+
+        .section p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #2f3640;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            background: #40739e;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="left-section">
+            <img src="your-photo.jpg" alt="Profile Picture">
+            <h2>Your Name</h2>
+            <p>Professional Title</p>
+            <ul>
+                <li><strong>Email:</strong> your.email@example.com</li>
+                <li><strong>Phone:</strong> +123 456 7890</li>
+                <li><strong>Address:</strong> 123 Main St, Your City</li>
+                <li><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</li>
+                <li><strong>GitHub:</strong> github.com/yourusername</li>
+            </ul>
+        </div>
+        <div class="right-section">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <p>An accomplished professional with expertise in delivering results-driven solutions. Skilled in leadership, strategy, and execution.</p>
+            </div>
+            <div class="section">
+                <h2>Work Experience</h2>
+                <div>
+                    <h3>Lead Engineer - Tech Solutions</h3>
+                    <p>Jan 2020 - Present</p>
+                    <p>Streamlined operations and optimized processes, resulting in a 20% increase in productivity.</p>
+                </div>
+                <div>
+                    <h3>Software Developer - CodeCraft</h3>
+                    <p>Jun 2017 - Dec 2019</p>
+                    <p>Developed high-performing applications, improving user satisfaction by 40%.</p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Education</h2>
+                <h3>Master of Computer Science - Elite University</h3>
+                <p>Graduation: 2017</p>
+                <p>Specialized in artificial intelligence and cloud computing, achieving top honors.</p>
+            </div>
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span>Python</span>
+                    <span>Java</span>
+                    <span>Machine Learning</span>
+                    <span>Cloud Computing</span>
+                    <span>Project Management</span>
+                    <span>Agile Methodologies</span>
+                    <span>React</span>
+                    <span>UI/UX Design</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

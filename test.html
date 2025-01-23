@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Modern CV Template</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #8e44ad, #3498db);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cv-container {
+            width: 85%;
+            max-width: 1000px;
+            display: flex;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background: #fff;
+        }
+
+        .left-section {
+            width: 35%;
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .left-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #ecf0f1;
+        }
+
+        .left-section h2 {
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .left-section p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .left-section ul {
+            list-style: none;
+            text-align: left;
+            padding-left: 0;
+        }
+
+        .left-section ul li {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .left-section ul li strong {
+            color: #ecf0f1;
+            display: block;
+            font-size: 16px;
+        }
+
+        .right-section {
+            width: 65%;
+            padding: 40px;
+            background: #fdfdfd;
+        }
+
+        .right-section h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        .right-section .section {
+            margin-bottom: 30px;
+        }
+
+        .right-section h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #8e44ad;
+        }
+
+        .right-section p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+
+        .right-section .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .right-section .skills span {
+            background: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="left-section">
+            <img src="your-photo.jpg" alt="Profile Picture">
+            <h2>Your Name</h2>
+            <p>Professional Title</p>
+            <ul>
+                <li><strong>Email:</strong> your.email@example.com</li>
+                <li><strong>Phone:</strong> +123 456 7890</li>
+                <li><strong>Address:</strong> 123 Main St, Your City</li>
+                <li><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</li>
+                <li><strong>GitHub:</strong> github.com/yourusername</li>
+            </ul>
+        </div>
+        <div class="right-section">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <p>A dynamic and highly motivated professional with a proven track record of achieving results. Adept at problem-solving, leadership, and delivering exceptional outcomes.</p>
+            </div>
+            <div class="section">
+                <h2>Work Experience</h2>
+                <div>
+                    <h3>Senior Developer - Tech Corp</h3>
+                    <p>Jan 2020 - Present</p>
+                    <p>Contributed to key projects, led cross-functional teams, and enhanced system efficiency by 30% through optimized workflows.</p>
+                </div>
+                <div>
+                    <h3>Junior Developer - CodeBase</h3>
+                    <p>Jan 2018 - Dec 2019</p>
+                    <p>Developed scalable applications and improved client satisfaction by implementing innovative features.</p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Education</h2>
+                <h3>Bachelor of Computer Science - XYZ University</h3>
+                <p>Graduation: 2017</p>
+                <p>Focused on software engineering, AI, and full-stack development. Graduated with honors.</p>
+            </div>
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Problem-Solving</span>
+                    <span>Team Leadership</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
