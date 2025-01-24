@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+
     <div class="container cvForm">
       <h1 class="text-center my-4">Resume Generator</h1>
       <p class="text-center">By Muhammad Waqas</p>
@@ -23,8 +25,9 @@
           <h3>Personal Information</h3>
 
           <div class="form-group">
-            <label for="nameField">Your Name</label>
+            <label for="nameField" class="required">Your Name</label>
             <input
+            required
               type="text"
               id="nameField"
               class="form-control"
@@ -33,8 +36,9 @@
           </div>
 
           <div class="form-group">
-            <label for="bioField">Your BIO</label>
+            <label for="bioField" class="required">Your BIO</label>
             <input
+            required
               type="text"
               id="bioField"
               class="form-control"
@@ -43,8 +47,9 @@
           </div>
 
           <div class="form-group mt-2">
-            <label for="contactField">Your Contact</label>
+            <label for="contactField" class="required">Your Contact</label>
             <input
+            required
               type="text"
               id="contactField"
               class="form-control"
@@ -53,8 +58,9 @@
           </div>
 
           <div class="form-group mt-2">
-            <label for="emailField">Your Email</label>
+            <label for="emailField" class="required">Your Email</label>
             <input
+            required
               type="text"
               id="emailField"
               class="form-control"
@@ -63,14 +69,27 @@
           </div>
 
           <div class="form-group mt-2">
-            <label for="addressField">Your Address</label>
+            <label for="addressField" class="required">Your Address</label>
 
             <textarea
+            required
               id="addressField"
               class="form-control"
               placeholder="Enter Here"
               rows="5"
             ></textarea>
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="photoField" class="required">Resume Photo</label>
+
+            <input
+            type="file"
+            class="form-control"
+            id="resumePhoto"
+           
+          />
+
           </div>
 
           <p class="text-secondary my-3">Important Links</p>
@@ -139,9 +158,10 @@
           <h3>Professional Information</h3>
 
           <div class="form-group mt-2">
-            <label for="">Objective</label>
+            <label for="" class="required">Objective</label>
 
             <textarea
+            required
               class="form-control objective"
               placeholder="Enter Here"
               rows="5"
@@ -251,14 +271,30 @@
       </div>
     </div>
 
-    <!-- ---------------------templates--------------------- -->
+
+    <!-- ---------------------templates
+      
+      
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corporis voluptatum doloribus ullam beatae fuga suscipit doloremque accusantium placeat. Omnis eaque, delectus veniam numquam ea eos expedita libero nihil molestiae!
+    
+    --------------------- -->
     <div class="userChoice none">
-      <h1>Choose a template for youe cv</h1>
+      <h1>Choose a template for your Resume</h1>
       <div class="templates">
-        <div class="template cvT1" onclick="displayT1()">template 1</div>
-        <div class="template cvT2" onclick="displayT2()">template 2</div>
-        <div class="template cvT3" onclick="displayT3()">template 3</div>
-        <div class="template cvT4" onclick="displayT4()">template 4</div>
+        <div class="template cvT1" onclick="displayT1()" 
+        style="background-image: url(./assets/t1.JPG);"
+        ></div>
+
+        <div class="template cvT2" onclick="displayT2()" 
+        style="background-image: url(./assets/t2.JPG);"
+        ></div>
+
+        <div class="template cvT3" onclick="displayT3()" style="background-image: url(./assets/t3.JPG);"></div>
+        <div class="template cvT4" onclick="displayT4()" style="background-image: url(./assets/t4.JPG);"></div>
+        <div class="template cvT5" onclick="displayT5()" style="background-image: url(./assets/t5.JPG);"></div>
+        <div class="template cvT6" onclick="displayT6()" style="background-image: url(./assets/t6.JPG);"></div>
+        <div class="template cvT7" onclick="displayT7()" style="background-image: url(./assets/t7.JPG);"></div>
+        <div class="template cvT8" onclick="displayT8()" style="background-image: url(./assets/t8.JPG);"></div>
       </div>
     </div>
 
@@ -286,6 +322,7 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

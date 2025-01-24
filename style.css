@@ -8,7 +8,7 @@
 }
 
 body {
-    background: rgb(241, 241, 241);
+    background: rgb(252, 252, 252);
     /* background: linear-gradient(135deg, #ff9a9e, #fad0c4); */
     /* display: flex;
     justify-content: center;
@@ -21,7 +21,9 @@ body {
     margin: 60px auto;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1100px;
+    width: 80%;
+    /* max-width: 1100px; */
+    min-width: 800px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -29,7 +31,8 @@ body {
 }
 
 .left-section {
-    flex: 1;
+    /* flex: 1; */
+    width: 33%;
     background: #2f3640;
     color: #f5f6fa;
     padding: 40px;
@@ -38,6 +41,7 @@ body {
     align-items: center;
     gap: 20px;
     text-align: center;
+    overflow: hidden;
 }
 
 .left-section ul {
@@ -45,10 +49,10 @@ body {
 }
 
 .left-section img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    border: 5px solid #f5f6fa;
+    border: 3px solid #f5f6fa;
 }
 
 .left-section h2 {
@@ -70,6 +74,8 @@ body {
 .left-section ul li {
     margin: 10px 0;
     font-size: 14px;
+    /* width: 80px; */
+    height: auto;
 }
 
 .left-section ul li strong {
@@ -78,8 +84,16 @@ body {
     color: #f5f6fa;
 }
 
+
+.required::after {
+    content: " *";
+    color: rgb(255, 115, 0);
+    font-size: 1.2rem;
+}
+
 .right-section {
-    flex: 2;
+    /* flex: 2; */
+    width: 66%;
     padding: 40px;
 }
 
@@ -142,6 +156,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 100;
   }
   
   .topRow p {
@@ -171,7 +186,9 @@ body {
   
 
 
-
+h6{
+    color: #00b9f1;
+}
 
 
 /* ----------- userChoice -------------- */
@@ -182,13 +199,18 @@ body {
 
 .userChoice h1 {
     text-align: center;
-    padding-bottom: 10px;
+    font-weight: bolder;
+    padding-block: 30px;
 }
 
 .templates {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-inline: 80px;
+    gap:50px 50px;
+    background-size: cover;
+    background-position: center;
 
 }
 
@@ -197,10 +219,19 @@ body {
     cursor: pointer;
     width: 20%;
     height: 200px;
+    
+    background-size: cover;
     background-color:blueviolet;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 2px rgb(199, 199, 199);
     color: white;
     font-size: 2rem;
+    transition: .2s ease-in-out;
+
+    &:hover{
+        box-shadow: 0px 0px 6px 4px rgb(187, 187, 187);
+    }
 }
 
 
