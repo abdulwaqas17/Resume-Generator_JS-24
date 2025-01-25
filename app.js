@@ -4,6 +4,7 @@ function  addNewWE() {
     console.log('hhh');
 
     let newTextArea = document.createElement('textarea');
+    newTextArea.classList.add('cancel');
     newTextArea.classList.add('form-control');
     newTextArea.classList.add('weField');
     newTextArea.classList.add('mt-2');
@@ -27,6 +28,7 @@ function addNewAQ() {
     
     
     let newTextArea = document.createElement('textarea');
+    newTextArea.classList.add('cancel');
     newTextArea.classList.add('form-control');
     newTextArea.classList.add('aqField');
     newTextArea.classList.add('mt-2');
@@ -48,6 +50,7 @@ function addNewPro() {
     
     
     let newTextArea = document.createElement('textarea');
+    newTextArea.classList.add('cancel');
     newTextArea.classList.add('form-control');
     newTextArea.classList.add('proField');
     newTextArea.classList.add('mt-2');
@@ -69,6 +72,7 @@ function addNewCert() {
     
     
     let newTextArea = document.createElement('textarea');
+    newTextArea.classList.add('cancel');
     newTextArea.classList.add('form-control');
     newTextArea.classList.add('certField');
     newTextArea.classList.add('mt-2');
@@ -90,6 +94,7 @@ function addNewCert() {
 function addNewLang() {
 
     let newInput = document.createElement('input');
+    newInput.classList.add('cancel');
     newInput.classList.add('form-control');
     newInput.classList.add('my-2');
     newInput.classList.add('langField');
@@ -109,6 +114,7 @@ function addNewLang() {
 function addNewSkill() {
 
     let newInput = document.createElement('input');
+    newInput.classList.add('cancel');
     newInput.classList.add('form-control');
     newInput.classList.add('my-2');
     newInput.classList.add('skillsField');
@@ -170,9 +176,11 @@ console.log(skillField);
 
 console.log(weField);
 
+
+// && userBio.value && userContact.value && userEmail.value && userAddress.value && resumePhotoURL && objective.value
    
 //  check is required fields are fill or not
-if (userName.value && userBio.value && userContact.value && userEmail.value && userAddress.value && resumePhotoURL && objective.value) {
+if (userName.value) {
     // function weTextareas() {
    
    //     var weSectionT = document.createElement('div');
@@ -215,9 +223,13 @@ if (userName.value && userBio.value && userContact.value && userEmail.value && u
    desireCV.innerHTML = `
    <div class="cv-container">
    <div class="left-section">
+       <div>
        <img src="${resumePhotoURL}" alt="Profile Picture">
        <h2>${userName.value}</h2>
        <p>${userBio.value}</p>
+
+       </div>
+
        <ul>
            <li><strong>Email:</strong> ${userEmail.value}</li>
            <li><strong>Phone:</strong> ${userContact.value}</li>
@@ -527,6 +539,7 @@ function displayT3(){
     var ls = document.querySelector('.left-section'); 
     console.log(ls);
     ls.style.background = '#0fa3b1';
+    ls.style.order = '1';
 
     var rh2 = document.querySelectorAll('.right-section h2'); 
     console.log(rh2);
@@ -564,6 +577,7 @@ function displayT4(){
     var ls = document.querySelector('.left-section'); 
     console.log(ls);
     ls.style.background = '#540d6e';
+    ls.style.order = '1';
 
     var rh2 = document.querySelectorAll('.right-section h2'); 
     console.log(rh2);
@@ -617,8 +631,22 @@ function displayT5(){
         sp.style.background = '#5c6b73';
     })
 
+    let cvContainer = document.querySelector('.cv-container');
+    cvContainer.style.flexDirection = 'column';
+    cvContainer.style.gap = '10px';
 
-    
+    ls.style.flexDirection = 'row';
+    ls.style.justifyContent = 'space-between';
+    ls.style.gap = '40%';
+    ls.style.width = '100%';
+    ls.style.height = '20%';
+
+    let rs = document.querySelector('.right-section');
+    rs.style.width = '100%';
+    rs.style.height = '80%';
+
+    let lsUl = document.querySelector('.left-section ul');
+    lsUl.style.width = '45%';
     
 }
 
@@ -655,7 +683,25 @@ function displayT6(){
     console.log(skSpan);
     skSpan.forEach((sp)=>{
         sp.style.background = '#780116';
-    })
+    });
+
+    let cvContainer = document.querySelector('.cv-container');
+    cvContainer.style.flexDirection = 'column';
+    cvContainer.style.gap = '10px';
+
+    ls.style.flexDirection = 'row';
+    ls.style.justifyContent = 'space-between';
+    ls.style.gap = '40%';
+    ls.style.width = '100%';
+    ls.style.height = '20%';
+
+    let rs = document.querySelector('.right-section');
+    rs.style.width = '100%';
+    rs.style.height = '80%';
+
+    let lsUl = document.querySelector('.left-section ul');
+    lsUl.style.width = '45%'
+
 
 
     
@@ -699,6 +745,29 @@ function displayT7(){
 
 
     
+    let cvContainer = document.querySelector('.cv-container');
+    cvContainer.style.flexDirection = 'column';
+    cvContainer.style.gap = '10px';
+
+    ls.style.flexDirection = 'row';
+    ls.style.justifyContent = 'space-between';
+    ls.style.gap = '40%';
+    ls.style.width = '100%';
+    ls.style.height = '20%';
+
+    let rs = document.querySelector('.right-section');
+    rs.style.width = '100%';
+    rs.style.height = '80%';
+
+    let lsUl = document.querySelector('.left-section ul');
+    lsUl.style.width = '45%';
+
+    
+
+
+    let divOfLS = document.querySelector('.left-section div');
+    divOfLS.style.order = '2';
+    
     
 }
 
@@ -736,6 +805,27 @@ function displayT8(){
         sp.style.background = '#25a18e';
     })
 
+    
+    let cvContainer = document.querySelector('.cv-container');
+    cvContainer.style.flexDirection = 'column';
+    cvContainer.style.gap = '10px';
+
+    ls.style.flexDirection = 'row';
+    ls.style.justifyContent = 'space-between';
+    ls.style.gap = '40%';
+    ls.style.width = '100%';
+    ls.style.height = '20%';
+
+    let rs = document.querySelector('.right-section');
+    rs.style.width = '100%';
+    rs.style.height = '80%';
+
+    let lsUl = document.querySelector('.left-section ul');
+    lsUl.style.width = '45%';
+
+
+    let divOfLS = document.querySelector('.left-section div');
+    divOfLS.style.order = '2';
 
     
     
@@ -812,3 +902,16 @@ Lekin DOM manipulations aur complex logic ko template literals ke baahar rakhna 
 
 
 */
+
+
+/*
+-------------- TODOS ----------------
+1 ==> PLAIN LINKEDIN POST OF JS
+2 ==> POST NOW ON LIN
+3 ==> - AND MULTI TEMPLATE IN RESUME
+4 ==> ID CARD ASSIGNMENT
+5 ==> VIEW CODE OF STDS
+*/
+
+
+
