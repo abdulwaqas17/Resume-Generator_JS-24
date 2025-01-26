@@ -193,33 +193,42 @@ h6{
     color: #00b9f1;
 }
 
-.cancel::before{
-    content: "yeyw";
-    background-color: red;
-    color: rgb(0, 187, 16);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
+.cancel{
+    position: relative;
+   
     
 }
 
-/* .remove {
-    background-color: red;
-    color: white;
+/* .cancel::after{
+    position: absolute;
+    content: 'a';
+    font-size: 2rem;
+    top: 0px;
+    right: 10px;
+    
+    
+} */
+
+.remove {
+    /* background-color: red; */
+    color: rgb(233, 28, 28);
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    font-weight: bolder;
+    font-size: 1.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0px;
-    right: 10px;
-} */
+    top: -7px;
+    right: -15px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.remove:hover{
+    color: rgb(158, 1, 1);
+    /* font-size: 1.2rem; */
+}
 /* ----------- userChoice -------------- */
 .userChoice {
     margin-block: 50px 30px;

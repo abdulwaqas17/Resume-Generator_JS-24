@@ -2,6 +2,9 @@
 function  addNewWE() {
     
     console.log('hhh');
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('my-2');
+    newDiv.classList.add('cancel');
 
     let newTextArea = document.createElement('textarea');
     newTextArea.classList.add('cancel');
@@ -11,20 +14,34 @@ function  addNewWE() {
     newTextArea.setAttribute('rows',3);
     newTextArea.setAttribute('placeholder','Enter here');
 
+    newDiv.appendChild(newTextArea);
     // console.log(newTextArea.classList);
 
     let weAddBtn = document.getElementById('weAddBtn');
     let WE = document.getElementById('WE');
 
-    WE.insertBefore(newTextArea,weAddBtn)
-
-
+    
+    
+    
+    let removeBtn = document.createElement('span');
+    removeBtn.innerHTML = 'x';
+    removeBtn.classList.add('remove');
+    removeBtn.setAttribute('onclick','removeIt(this)');
+    
+    newDiv.appendChild(removeBtn)
+    
+    WE.insertBefore(newDiv,weAddBtn)
+ 
 }
 
 
 
 // -----------  FOR ADD NEW TEXTAREA IN ACADEMIC QULAIFICATION ------------ 
 function addNewAQ() {
+    
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('my-2');
+    newDiv.classList.add('cancel');
     
     
     let newTextArea = document.createElement('textarea');
@@ -36,17 +53,32 @@ function addNewAQ() {
     newTextArea.setAttribute('placeholder','Enter here');
 
     // console.log(newTextArea.classList);
+    newDiv.appendChild(newTextArea);
     
     let aqAddBtn = document.getElementById('aqAddBtn');
     let AQ = document.getElementById('AQ');
+
+
+    let removeBtn = document.createElement('span');
+    removeBtn.innerHTML = 'x';
+    removeBtn.classList.add('remove');
+    removeBtn.setAttribute('onclick','removeIt(this)');
     
-    AQ.insertBefore(newTextArea,aqAddBtn)
+    newDiv.appendChild(removeBtn)
     
+    
+    
+    AQ.insertBefore(newDiv,aqAddBtn)
+
 }
 
 
 // -----------  FOR ADD NEW TEXTAREA IN PROJECTS ------------ 
 function addNewPro() {
+
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('my-2');
+    newDiv.classList.add('cancel');
     
     
     let newTextArea = document.createElement('textarea');
@@ -58,17 +90,30 @@ function addNewPro() {
     newTextArea.setAttribute('placeholder','Enter here');
 
     // console.log(newTextArea.classList);
+    newDiv.appendChild(newTextArea);
     
     let proAddBtn = document.getElementById('proAddBtn');
     let proBox = document.getElementById('proBox');
     
-    proBox.insertBefore(newTextArea,proAddBtn)
+
+    let removeBtn = document.createElement('span');
+    removeBtn.innerHTML = 'x';
+    removeBtn.classList.add('remove');
+    removeBtn.setAttribute('onclick','removeIt(this)');
+    
+    newDiv.appendChild(removeBtn)
+
+    proBox.insertBefore(newDiv,proAddBtn)
     
 }
 
 
 // -----------  FOR ADD NEW TEXTAREA IN CERTIFICATION ------------ 
 function addNewCert() {
+
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('my-2');
+    newDiv.classList.add('cancel');
     
     
     let newTextArea = document.createElement('textarea');
@@ -80,11 +125,19 @@ function addNewCert() {
     newTextArea.setAttribute('placeholder','Enter here');
 
     // console.log(newTextArea.classList);
+    newDiv.appendChild(newTextArea);
     
     let certAddBtn = document.getElementById('certAddBtn');
     let certBox = document.getElementById('certBox');
+
+    let removeBtn = document.createElement('span');
+    removeBtn.innerHTML = 'x';
+    removeBtn.classList.add('remove');
+    removeBtn.setAttribute('onclick','removeIt(this)');
     
-    certBox.insertBefore(newTextArea,certAddBtn)
+    newDiv.appendChild(removeBtn);
+    
+    certBox.insertBefore(newDiv,certAddBtn);
     
 }
 
@@ -93,18 +146,32 @@ function addNewCert() {
 // -----------  FOR ADD NEW INPUT FIELD IN INTEREST ------------ 
 function addNewLang() {
 
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('my-2');
+    newDiv.classList.add('cancel');
+    
     let newInput = document.createElement('input');
-    newInput.classList.add('cancel');
     newInput.classList.add('form-control');
-    newInput.classList.add('my-2');
     newInput.classList.add('langField');
     newInput.setAttribute('placeholder','Enter here');
     newInput.setAttribute('type','text');
 
+    newDiv.appendChild(newInput);
+
     let langBox = document.getElementById('langBox');
     let langAddBtn = document.getElementById('langAddBtn');
 
-    langBox.insertBefore(newInput,langAddBtn);
+    let removeBtn = document.createElement('span');
+    removeBtn.innerHTML = 'x';
+    removeBtn.classList.add('remove');
+    removeBtn.setAttribute('onclick','removeIt(this)');
+
+    newDiv.appendChild(removeBtn)
+
+    langBox.insertBefore(newDiv,langAddBtn);
+
+
+
 
 }
 
@@ -113,6 +180,12 @@ function addNewLang() {
 // -----------  FOR ADD NEW INPUT FIELD IN SKILLS ------------ 
 function addNewSkill() {
 
+    
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('my-2');
+    newDiv.classList.add('cancel');
+
+    
     let newInput = document.createElement('input');
     newInput.classList.add('cancel');
     newInput.classList.add('form-control');
@@ -120,11 +193,21 @@ function addNewSkill() {
     newInput.classList.add('skillsField');
     newInput.setAttribute('placeholder','Enter here');
     newInput.setAttribute('type','text');
+    
+    newDiv.appendChild(newInput);
 
     let skillsBox = document.getElementById('skillsBox');
     let skillsAddBtn = document.getElementById('skillsAddBtn');
 
-    skillsBox.insertBefore(newInput,skillsAddBtn);
+    let removeBtn = document.createElement('span');
+    removeBtn.innerHTML = 'x';
+    removeBtn.classList.add('remove');
+    removeBtn.setAttribute('onclick','removeIt(this)');
+
+    newDiv.appendChild(removeBtn)
+
+
+    skillsBox.insertBefore(newDiv,skillsAddBtn);
 
 }
 
@@ -180,7 +263,7 @@ console.log(weField);
 // && userBio.value && userContact.value && userEmail.value && userAddress.value && resumePhotoURL && objective.value
    
 //  check is required fields are fill or not
-if (userName.value) {
+if (userName.value && userBio.value && userContact.value && userEmail.value && userAddress.value && resumePhotoURL && objective.value) {
     // function weTextareas() {
    
    //     var weSectionT = document.createElement('div');
@@ -833,6 +916,14 @@ function displayT8(){
 
 
 
+
+function removeIt(r) {
+    let parentDiv = r.parentElement;
+    console.log(r);
+    console.log(parentDiv);
+    parentDiv.remove();
+    // parentDiv.style.display = 'none';
+}
 
 // ----------- downloadCV -------------
 // function downloadCV(){
